@@ -18,6 +18,26 @@ components:
         email: fake@example.com
         name: fake name
         role: user
+    Savings:
+      type: object
+      properties:
+        frequency:
+          type: string
+          enum : [daily , weekly , monthly]
+        isAutosave:
+          type: boolean
+        start_date:
+          type: date
+        maturity_date:
+          type: date
+        amount:
+          type: number
+      example:
+        isAutosave: true
+        frequency: weekly
+        start_date: 2022-02-01
+        maturity_date: 2023-02-01
+        amount: 1000
 
     Token:
       type: object
